@@ -1,19 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Dribbble Layout Recreation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border: none;
+      background-color: transparent;
+    }
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+    .profile-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .card-footer {
+      font-size: 0.85rem;
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      border-top: none;
+    }
+    .like-comment {
+      float: right;
+    }
+    .nav-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      flex-grow: 1;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-button {
+      background: none;
+      border: none;
+      font-weight: 500;
+      color: #333;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+    .nav-button.active {
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+    }
+    .filters-button {
+      background-color: #e0e0e0;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-section {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .nav-left, .nav-center, .nav-right {
+        justify-content: center;
+      }
+      .nav-left, .nav-right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-4">
+
+    <div class="nav-section">
+      <div class="nav-left">
+        <button class="nav-button active">Popular</button>
+      </div>
+
+      <div class="nav-center">
+        <button class="nav-button">Discover</button>
+        <button class="nav-button">Animation</button>
+        <button class="nav-button">Branding</button>
+        <button class="nav-button">Illustration</button>
+        <button class="nav-button">Mobile</button>
+        <button class="nav-button">Print</button>
+      </div>
+
+      <div class="nav-right">
+        <button class="filters-button">Filters</button>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image1.png" class="card-img-top" alt="Image 1">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile1.png" class="profile-img me-2" alt="Profile 1">
+              <span>Sieg Media</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 193</span> &nbsp; <span>❤️ 67.4k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image2.png" class="card-img-top" alt="Image 2">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile2.png" class="profile-img me-2" alt="Profile 2">
+              <span>Orman Clark</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 98</span> &nbsp; <span>❤️ 24.3k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image3.png" class="card-img-top" alt="Image 3">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile3.png" class="profile-img me-2" alt="Profile 3">
+              <span>Jordon Cheung</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 69</span> &nbsp; <span>❤️ 67.1k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image4.png" class="card-img-top" alt="Image 4">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile4.png" class="profile-img me-2" alt="Profile 4">
+              <span>Aldo Crusher</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 65</span> &nbsp; <span>❤️ 67.0k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image5.png" class="card-img-top" alt="Image 5">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile5.png" class="profile-img me-2" alt="Profile 5">
+              <span>Canto</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 12</span> &nbsp; <span>❤️ 4.1k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image6.png" class="card-img-top" alt="Image 6">
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="profile6.png" class="profile-img me-2" alt="Profile 6">
+              <span>Ramy Wafaa</span>
+            </div>
+            <div class="like-comment">
+              <span>💬 93</span> &nbsp; <span>❤️ 41.5k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
 </html>
+
+

@@ -1,2 +1,2 @@
-# Static HTML Boilerplate
-Basic HTML, CSS, and JavaScript setup for a simple website.
+# Basic Boot Strap Site
+Basic site recreating dribbble in bootstrap
